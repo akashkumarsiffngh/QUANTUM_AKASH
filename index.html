@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROLEX STUDYRAYS- Learn Akash</title>
+    <title>ROLEX AKASH - Learn Akash</title>
     <style>
         :root {
             --primary-color: #3498db;
@@ -366,7 +365,7 @@
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             padding: 40px 30px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -573,6 +572,93 @@
             }
         }
 
+        /* New Styles for Password System */
+        .generate-key-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(45deg, #9b59b6, #8e44ad);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 15px;
+        }
+
+        .generate-key-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .instructions h4 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .instructions ul {
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 8px;
+        }
+
+        .password-status {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .password-valid {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: #27ae60;
+        }
+
+        .password-expired {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: #c0392b;
+        }
+
+        /* Festival-specific styles for Generate Key button */
+        .diwali-theme .generate-key-btn {
+            background: linear-gradient(45deg, #ff9933, #ffcc00);
+            color: #990000;
+            font-weight: bold;
+        }
+
+        .chhat-puja-theme .generate-key-btn {
+            background: linear-gradient(45deg, #ff9933, #138808);
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Festival-specific styles for instructions */
+        .diwali-theme .instructions {
+            background: rgba(255, 255, 255, 0.9);
+            border-left: 4px solid #ff9933;
+            color: #990000;
+        }
+
+        .chhat-puja-theme .instructions {
+            background: rgba(255, 255, 255, 0.9);
+            border-left: 4px solid #ff9933;
+            color: #0a3d00;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
@@ -605,21 +691,18 @@
     </style>
 </head>
 <body>
-
-
-    // Festival decorations will be added dynamically
-  
-<div class="festival-decoration" id="festivalDecoration"></div>
+    <!-- Festival decorations will be added dynamically -->
+    <div class="festival-decoration" id="festivalDecoration"></div>
     
-    // Floating elements for normal theme
+    <!-- Floating elements for normal theme -->
     <div class="floating-elements" id="floatingElements"></div>
 
-    // Header
+    <!-- Header -->
     <header>
         <div class="container header-content">
             <div class="logo">
-                <img src="https://i.ibb.co/JWDKrDRz/22353.png" alt="ROLEXCODERZ Logo" id="headerLogo">
-                <h1>ROLEX STUDYRAYS</h1>
+                <img src="https://i.ibb.co/cn6n0yb/20900.png" alt="ROLEXCODERZ Logo" id="headerLogo">
+                <h1>ROLEXCODERZ</h1>
             </div>
             <nav>
                 <ul>
@@ -633,15 +716,16 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2>Welcome to ROLEX STUDYRAYS</h2>
+            <h2>Welcome to ROLEXCODERZ</h2>
             <p>Master coding skills with our comprehensive courses designed by industry experts. Start your journey to become a professional developer today.</p>
             <a href="#" class="btn" id="getStartedBtn">Get Started</a>
         </div>
     </section>
 
-
+    <!-- Features Section -->
     <section class="features">
         <div class="container">
             <h2 class="section-title">Our Features</h2>
@@ -665,38 +749,48 @@
         </div>
     </section>
 
-    
+    <!-- Footer -->
     <footer>
         <div class="container footer-content">
             <div class="footer-logo">
-                <img src="https://i.ibb.co/JWDKrDRz/22353.png" alt="ROLEXCODERZ Logo">
+                <img src="https://i.ibb.co/cn6n0yb/20900.png" alt="ROLEXCODERZ Logo">
             </div>
             <p>LEARN AKASH - Empowering developers since 2025</p>
-            <p class="copyright">© 2025 ROLEX STUDYRAYS. All rights reserved. | Owner: Akash Singh</p>
+            <p class="copyright">© 2025 ROLEXCODERZ. All rights reserved. | Owner: Akash Singh</p>
         </div>
     </footer>
 
-
+    <!-- Login Modal -->
     <div class="login-modal" id="loginModal">
         <div class="login-container">
             <button class="close-btn" id="closeLoginBtn">&times;</button>
             <div class="login-logo">
-                <img src="https://i.ibb.co/JWDKrDRz/22353.png" alt="ROLEXCODERZ Logo">
+                <img src="https://i.ibb.co/cn6n0yb/20900.png" alt="ROLEXCODERZ Logo">
             </div>
             <div class="login-form">
-                <h2>Login to ROLEX STUDYRAYS</h2>
+                <h2>Login to ROLEXCODERZ</h2>
+                <div id="passwordStatus" class="password-status"></div>
                 <form id="loginForm">
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" id="password" placeholder="Enter your password" required>
                     </div>
                     <button type="submit" class="login-btn">Login</button>
+                    <button type="button" class="generate-key-btn" id="generateKeyBtn">Generate Key</button>
                 </form>
+                <div class="instructions" id="instructions">
+                    <h4>Instructions:</h4>
+                    <ul>
+                        <li>First enter your correct mobile number</li>
+                        <li>If wrong you will be blocked any time</li>
+                        <li>Copy code and paste in column</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    
+    <!-- Theme Indicator -->
     <div class="theme-indicator" id="themeIndicator">Normal Theme</div>
 
     <script>
@@ -710,10 +804,54 @@
         const festivalDecoration = document.getElementById('festivalDecoration');
         const floatingElements = document.getElementById('floatingElements');
         const themeIndicator = document.getElementById('themeIndicator');
+        const generateKeyBtn = document.getElementById('generateKeyBtn');
+        const instructions = document.getElementById('instructions');
+        const passwordStatus = document.getElementById('passwordStatus');
         const body = document.body;
 
-        // Valid passwords
-        const validPasswords = ['22', 'Akash', '228', '9228', '2025', 'chhat', 'diwali'];
+        // Password series (first 250 passwords from the provided list)
+        const passwordSeries = [
+            'A73829', 'B49102', 'C82517', 'D16394', 'E57281', 'F94813', 'G62570', 'H31946', 'I85702', 'J26439',
+            'K17385', 'L94206', 'M68941', 'N35712', 'O82659', 'P19473', 'Q56827', 'R73149', 'S28506', 'T94715',
+            'U62948', 'V17583', 'W49621', 'X83259', 'Y76418', 'Z39157', 'a52964', 'b18735', 'c64290', 'd35917',
+            'e87642', 'f19365', 'g42871', 'h69523', 'i84716', 'j35289', 'k97413', 'l26185', 'm53974', 'n68259',
+            'o14736', 'p29584', 'q76312', 'r41879', 's65203', 't38941', 'u92657', 'v57418', 'w23965', 'x68147',
+            'y92536', 'z47319', 'A15963', 'B78241', 'C39652', 'D84719', 'E26385', 'F59174', 'G72836', 'H14592',
+            'I67923', 'J38257', 'K91468', 'L52739', 'M86145', 'N39427', 'O75218', 'P16934', 'Q48372', 'R29756',
+            'S63489', 'T85127', 'U46913', 'V17285', 'W59364', 'X82671', 'Y34792', 'Z61845', 'a27953', 'b68412',
+            'c39167', 'd52784', 'e16349', 'f89527', 'g34276', 'h61958', 'i78431', 'j25694', 'k93718', 'l46279',
+            'm18953', 'n72546', 'o39182', 'p64729', 'q18357', 'r52964', 's37618', 't94175', 'u26843', 'v59317',
+            'w82469', 'x15738', 'y69247', 'z38415', 'A72649', 'B15387', 'C48962', 'D31759', 'E69248', 'F83517',
+            'G14692', 'H57923', 'I82476', 'J39165', 'K25794', 'L61837', 'M94256', 'N37518', 'O69147', 'P28439',
+            'Q53792', 'R16948', 'S42375', 'T78619', 'U35184', 'V92756', 'W46832', 'X19375', 'Y52689', 'Z74813',
+            'a63927', 'b18543', 'c47296', 'd35918', 'e62479', 'f89735', 'g24186', 'h57392', 'i68914', 'j32567',
+            'k94728', 'l16259', 'm78345', 'n41963', 'o25791', 'p68432', 'q13957', 'r47286', 's59134', 't82679',
+            'u36418', 'v19752', 'w52863', 'x34917', 'y67189', 'z24356', 'A78519', 'B36248', 'C91735', 'D42869',
+            'E15372', 'F69748', 'G32415', 'H86927', 'I54193', 'J27658', 'K93841', 'L65279', 'M18753', 'N42968',
+            'O76312', 'P59147', 'Q28439', 'R71685', 'S35942', 'T68719', 'U92436', 'V15789', 'W36274', 'X49815',
+            'Y73162', 'Z85924', 'a27631', 'b49387', 'c61859', 'd32746', 'e95138', 'f68427', 'g13965', 'h47289',
+            'i59613', 'j82745', 'k36179', 'l94852', 'm27536', 'n61948', 'o38275', 'p54719', 'q69183', 'r23497',
+            's56812', 't79345', 'u42689', 'v15763', 'w38942', 'x61579', 'y24786', 'z93165', 'A57824', 'B19653',
+            'C42387', 'D75916', 'E38249', 'F61785', 'G92437', 'H15689', 'I47923', 'J68251', 'K39748', 'L12569',
+            'M86437', 'N29145', 'O53792', 'P68914', 'Q15279', 'R43698', 'S79125', 'T26438', 'U95716', 'V38249',
+            'W61587', 'X23974', 'Y86715', 'Z49132', 'a57389', 'b21647', 'c48953', 'd76219', 'e39548', 'f12769',
+            'g65432', 'h38917', 'i52196', 'j74835', 'k96312', 'l28749', 'm51478', 'n63925', 'o17289', 'p45637',
+            'q98123', 'r35479', 's62718', 't49365', 'u81647', 'v25938', 'w73419', 'x56827', 'y19263', 'z47589',
+            'A63912', 'B28745', 'C51479', 'D36218', 'E79524', 'F12863', 'G45719', 'H69328', 'I82147', 'J35976',
+            'K67419', 'L23857', 'M96145', 'N52738', 'O18469', 'P35297', 'Q61948', 'R27356', 'S48519', 'T69723',
+            'U12489', 'V35762', 'W98145', 'X23679', 'Y56418', 'Z79123', 'a34857', 'b69214', 'c17589', 'd42367',
+            'e98615', 'f23749', 'g56192', 'h89437', 'i32569', 'j71845', 'k49327', 'l85619', 'm27148', 'n63925',
+            'o18479', 'p35268', 'q91743', 'r68529', 's23947', 't57186', 'u89432', 'v12659', 'w34781', 'x65923',
+            'y18247', 'z39568', 'A72419', 'B85637', 'C29148', 'D63759', 'E18427', 'F35968', 'G74219', 'H68523',
+            'I91746', 'J23859', 'K47186', 'L59237', 'M16489', 'N32756', 'O48179', 'P69523', 'Q12748', 'R35967',
+            'S48219', 'T61537', 'U79428', 'V16259', 'W38547', 'X72916', 'Y45389', 'Z61827', 'a79534', 'b16289',
+            'c43857', 'd69123', 'e27459', 'f83617', 'g15942', 'h68273', 'i39715', 'j52489', 'k76132', 'l89547',
+            'm21369', 'n54718', 'o68239', 'p91527', 'q36489', 'r12735', 's45968', 't78213', 'u39645', 'v51879',
+            'w24367', 'x69518', 'y32749', 'z85176'
+        ];
+
+        // Start date: October 14, 2025 at 00:00:00
+        const startDate = new Date('2025-10-14T00:00:00');
         
         // Festival dates (for demonstration, using current year)
         const currentYear = new Date().getFullYear();
@@ -725,6 +863,46 @@
         // Chhat Puja dates (example: November 17-20, 2023)
         const chhatStart = new Date(currentYear, 10, 17); // November 17
         const chhatEnd = new Date(currentYear, 10, 20); // November 20
+
+        // Function to get current day's password (expires at END of day)
+        function getCurrentPassword() {
+            const today = new Date();
+            const timeDiff = today.getTime() - startDate.getTime();
+            const dayDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+            
+            // If before start date, return null
+            if (dayDiff < 0) return null;
+            
+            // If beyond the 250th day, return expired
+            if (dayDiff >= passwordSeries.length) return 'EXPIRED';
+            
+            // Return the password for the current day
+            return passwordSeries[dayDiff];
+        }
+
+        // Update password status in the login modal
+        function updatePasswordStatus() {
+            const currentPassword = getCurrentPassword();
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            
+            const timeUntilExpiry = tomorrow.getTime() - today.getTime();
+            const hoursUntilExpiry = Math.floor(timeUntilExpiry / (1000 * 60 * 60));
+            const minutesUntilExpiry = Math.floor((timeUntilExpiry % (1000 * 60 * 60)) / (1000 * 60));
+            
+            if (currentPassword === null) {
+                passwordStatus.textContent = 'Password system starts from October 14, 2025';
+                passwordStatus.className = 'password-status password-expired';
+            } else if (currentPassword === 'EXPIRED') {
+                passwordStatus.textContent = 'Password has EXPIRED. Please generate a new key.';
+                passwordStatus.className = 'password-status password-expired';
+            } else {
+                passwordStatus.textContent = `Today's password is valid (Day ${passwordSeries.indexOf(currentPassword) + 1}) - Expires in ${hoursUntilExpiry}h ${minutesUntilExpiry}m`;
+                passwordStatus.className = 'password-status password-valid';
+            }
+        }
 
         // Check current date and apply appropriate theme
         function applyFestivalTheme() {
@@ -793,36 +971,55 @@
         // Event Listeners
         loginBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            updatePasswordStatus();
             loginModal.style.display = 'flex';
+            
+            // Update the countdown every minute
+            if (this.interval) clearInterval(this.interval);
+            this.interval = setInterval(updatePasswordStatus, 60000);
         });
 
         closeLoginBtn.addEventListener('click', function() {
             loginModal.style.display = 'none';
+            if (loginBtn.interval) clearInterval(loginBtn.interval);
         });
 
         getStartedBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            updatePasswordStatus();
             loginModal.style.display = 'flex';
+            
+            // Update the countdown every minute
+            if (this.interval) clearInterval(this.interval);
+            this.interval = setInterval(updatePasswordStatus, 60000);
         });
 
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const password = passwordInput.value.trim();
+            const currentPassword = getCurrentPassword();
             
-            if (validPasswords.includes(password)) {
+            // Check if password is valid
+            if (currentPassword && currentPassword !== 'EXPIRED' && password === currentPassword) {
                 // Redirect to the specified URL
-                window.location.href = 'https://trushort.site/QCfs';
+                window.location.href = 'https://short.rolexcoderz.live/';
             } else {
-                alert('Invalid password. Please try again.');
+                alert('Invalid password. Please try again or generate a new key if expired.');
                 passwordInput.value = '';
                 passwordInput.focus();
             }
+        });
+
+        generateKeyBtn.addEventListener('click', function() {
+            // Open Telegram bot
+            window.open('https://t.me/ROLEX_AKASH_bot', '_blank');
         });
 
         // Close modal when clicking outside
         window.addEventListener('click', function(e) {
             if (e.target === loginModal) {
                 loginModal.style.display = 'none';
+                if (loginBtn.interval) clearInterval(loginBtn.interval);
             }
         });
 
@@ -833,5 +1030,3 @@
     </script>
 </body>
 </html>
-
-
